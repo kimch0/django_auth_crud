@@ -82,7 +82,8 @@ WSGI_APPLICATION = "djangocrud.wsgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgresql://postgres:postgres@localhost/postgres", conn_max_age=600
+        default="postgresql://postgres:postgres@localhost:5432/postgres",
+        conn_max_age=600,
     )
 }
 
@@ -121,7 +122,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
 
 STATIC_URL = "/static/"
 
